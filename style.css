@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main.login {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #E75590, #00C2C8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  div.container {
+    min-height: 400px;
+    width: 300px;
+    background: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+    h1.title {
+      color: #303030;
+      margin-bottom: 32px;
+    }
+
+    form.formulario {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+      input.input {
+        height: 48px;
+        width: 100%;
+        padding-left: 8px;
+        border: unset;
+        outline: none;
+      }
+
+
+
+      span.border {
+        height: 1px;
+        width: 100%;
+        margin-bottom: 16px;
+        background: #CFCFCF;
+        transition: .3s ease-in-out;
+      }
+
+      span.border::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 0;
+        margin-bottom: 16px;
+        background: linear-gradient(120deg, #E75590, #00C2C8);
+        transition: .3s ease-in-out;
+      }
+
+      button.submit {
+        background: linear-gradient(120deg, #E75590, #00C2C8, #E75590);
+        outline: none;
+        height: 48px;
+        width: 100%;
+        background-size: 200%;
+        border: unset;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        margin-bottom: 36px;
+      }
+
+      a.reset_senha {
+        font-size: 16px;
+        text-decoration: none;
+        color: #929292;
+      }
