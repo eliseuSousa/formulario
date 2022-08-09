@@ -5,9 +5,15 @@
   font-family: sans-serif;
 }
 
+:root {
+  --linear-gradient: linear-gradient(120deg, #E75590, #00C2C8);
+  --linear-gradient-button: linear-gradient(120deg, #E75590, #00C2C8, #E75590);
+  --border-height: 1px;
+}
+
 main.login {
   min-height: 100vh;
-  background: linear-gradient(120deg, #E75590, #00C2C8);
+  background: var(--linear-gradient);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,10 +50,8 @@ main.login {
         outline: none;
       }
 
-
-
       span.border {
-        height: 1px;
+        height: var(--border-height);
         width: 100%;
         margin-bottom: 16px;
         background: #CFCFCF;
@@ -57,15 +61,15 @@ main.login {
       span.border::after {
         content: '';
         display: block;
-        height: 1px;
+        height: var(--border-height);
         width: 0;
         margin-bottom: 16px;
-        background: linear-gradient(120deg, #E75590, #00C2C8);
+        background: var(--linear-gradient);
         transition: .3s ease-in-out;
       }
 
       button.submit {
-        background: linear-gradient(120deg, #E75590, #00C2C8, #E75590);
+        background: var(--linear-gradient-button);
         outline: none;
         height: 48px;
         width: 100%;
