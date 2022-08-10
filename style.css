@@ -9,6 +9,9 @@
   --linear-gradient: linear-gradient(120deg, #E75590, #00C2C8);
   --linear-gradient-button: linear-gradient(120deg, #E75590, #00C2C8, #E75590);
   --border-height: 1px;
+  --input-error: red;
+  --input-disabled: #ACACAC;
+  --input-success: rgb(10, 151, 107);
 }
 
 main.login {
@@ -58,6 +61,10 @@ main.login {
         transition: .3s ease-in-out;
       }
 
+      span.error {
+        background: var(--input-error);
+      }
+
       span.border::after {
         content: '';
         display: block;
@@ -66,6 +73,10 @@ main.login {
         margin-bottom: 16px;
         background: var(--linear-gradient);
         transition: .3s ease-in-out;
+      }
+
+      span.error::after {
+        background: var(--input-error);
       }
 
       input.input:focus + span.border::after {
@@ -90,6 +101,19 @@ main.login {
 
       button.submit:hover {
         background-position: right;
+      }
+
+      button.submit:disabled {
+        background: var(--input-disabled);
+        cursor: not-allowed;
+      }
+
+      button.submit.error {
+        background: var(--input-error);
+      }
+
+      button.submit.success {
+        background: var(--input-success);
       }
 
       a.reset_senha {
